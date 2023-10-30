@@ -1,0 +1,44 @@
+.search-main {
+  width: 70%;
+  max-width: 600px;
+  margin: auto;
+  height: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 100px;
+  border: 10px solid black;
+  background-color: white;
+  outline: 4px solid #dffe00;
+  padding: 20px 30px;
+  padding-right: 5px;
+  /* outline-offset: 10px; */
+  position: relative;
+}
+.search-main > svg {
+  width: 30px;
+}
+.search-main > input {
+  flex: 1;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding-left: 10px;
+}
+.search-main > input:focus {
+  outline: none;
+}
+
+.dot-mode {
+  margin-left: auto;
+  color: black;
+  background-color: #dffe00;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: larger;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}

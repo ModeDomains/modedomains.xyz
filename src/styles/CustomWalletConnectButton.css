@@ -1,0 +1,131 @@
+.wrong_network_btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: small;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  background-color: #ff494a;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+.wrong_network_btn:hover {
+  transform: scale(1.05);
+}
+.wrong_network_btn > span {
+  margin-right: 5px;
+}
+
+.connect-wallet {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.12)
+  );
+  color: #dffe00;
+  border: none;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.connect-wallet:hover {
+  transform: scale(1.01);
+}
+.chain-button {
+  cursor: pointer;
+  margin: auto 10px;
+  padding: 5px;
+  font-size: 0.865rem;
+  font-size: medium;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.chain-button:hover {
+  transform: scale(1.01);
+}
+.address-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0px;
+  padding: 2px;
+  padding-left: 5px;
+  font-size: 0.865rem;
+  font-size: medium;
+  font-family: "Inter", sans-serif;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.address-balance:hover {
+  transform: scale(1.01);
+}
+.account-balance .avatar-container {
+  margin-right: 5px;
+}
+.account-balance {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.12)
+  );
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: medium;
+  padding: 6px 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+.account-name {
+  color: #dffe00;
+}
+
+@media (max-width: 786px) {
+  button.connect-wallet {
+    padding: 10px 10px;
+    font-size: 0.865rem;
+    letter-spacing: normal;
+  }
+  button.chain-button {
+    padding: 10px 10px;
+    font-size: 0.865rem;
+    letter-spacing: normal;
+  }
+  .disable-mobile {
+    display: none !important;
+  }
+  span.account-balance {
+    font-size: 0.865rem;
+    padding: 2px 4px;
+  }
+  button.address-balance {
+    content: "";
+    padding: 1px;
+  }
+  .account-name {
+    display: none;
+  }
+}
