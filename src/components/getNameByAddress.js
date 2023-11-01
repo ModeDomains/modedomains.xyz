@@ -24,9 +24,7 @@ export const getNameByAddress = async (address) => {
         tokenId
       );
       // console.log(domainNameCreatedTimeStamp);
-      const domainNameExpiryTimeStamp = await con.tokenIdToCreationTimestamp(
-        tokenId
-      );
+      const domainNameExpiryTimeStamp = await con.nameExpiry(domainName);
       // console.log(domainNameExpiryTimeStamp);
 
       const domainNameRegistrationPrice = await con.getRegistrationPrice(
