@@ -21,14 +21,14 @@ ModeDomains is a user-centric blockchain engagement platform built on the MODE n
 To get started with ModeDomains, follow these steps:
 
 1. Visit the [modedomains.xyz](https://modedomains.xyz/) link here.
-2. Connect your wallet to the MODE network.
+2. Connect your wallet to the MODE Testnet.
 3. Search for a domain name or directly enter the desired domain name in the search input field.
 4. The application will check if the domain name is available, registered, or too short (less than 3 characters).
 5. If the domain name is available, click on the "Buy Now" option.
 6. Fill out the registration form with the desired time period for your domain.
 7. Optionally, you will the option to get some faucet on the MODE testnet (required for domain purchase).
 8. Complete the transaction.
-9. After completing the transaction, you will be redirected to the profile page.
+9. After completing the transaction, you will be redirected to the profile page where you can see all the details about the purchased domain name like registration date, expiry date, and price you paid for that domain name.
 
 ## Usage
 
