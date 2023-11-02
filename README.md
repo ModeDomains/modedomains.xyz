@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# ModeDomains React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- Introduction
+- Getting Started
+- Usage
+- Features
+- Technologies Used
+- Installation
+- Running the App
+- Contributing
+- License
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+ModeDomains is a user-centric blockchain engagement platform built on the MODE network. It provides a seamless experience for users to claim and manage unique '.mode' domains. This React-based web application allows users to interact with the MODE test network to buy and register domain names.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get started with ModeDomains, follow these steps:
 
-### `npm test`
+1. Visit the [modedomains.xyz](https://modedomains.xyz/) link here.
+2. Connect your wallet to the MODE network.
+3. Search for a domain name or directly enter the desired domain name in the search input field.
+4. The application will check if the domain name is available, registered, or too short (less than 3 characters).
+5. If the domain name is available, click on the "Buy Now" option.
+6. Fill out the registration form with the desired time period for your domain.
+7. Optionally, you will the option to get some faucet on the MODE testnet (required for domain purchase).
+8. Complete the transaction.
+9. After completing the transaction, you will be redirected to the profile page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+The ModeDomains app provides a user-friendly interface for interacting with the MODE network to claim and manage domain names. Users can search for available domain names, purchase them, and view detailed information about their registered domains on the profile page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Seamless blockchain engagement on the MODE network.
+User-friendly interface for domain registration and management.
+Real-time availability checks for domain names.
+Detailed domain information, including registration date, expiry date, and last selling price.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+React.js
+Yarn package manager
+MODE network integration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation (Offline)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In this project, we've opted to use Yarn as our package manager due to its faster and more reliable dependency resolution, as well as its robust caching mechanism, which leads to quicker and more consistent builds.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Clone the Repository**: Begin by cloning the TraceCheck repository to your local machine.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/abhirrajput210/Trace_Check.git
+   ```
 
-## Learn More
+2. **Install Dependencies**: Navigate to the project directory and install the necessary dependencies.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   cd Trace_Check
+   yarn
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Start the Application**: Once the dependencies are installed, you can start the application.
 
-### Code Splitting
+   ```bash
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Access the App**: Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access ModeDomains.
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+We welcome contributions from the community! If you'd like to contribute to the project, please follow the guidelines outlined in the CONTRIBUTING.md file.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.

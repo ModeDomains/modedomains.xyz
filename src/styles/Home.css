@@ -130,6 +130,10 @@ p.domain-card-name {
   border: 1px solid rgb(242, 104, 91);
 }
 
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 @media screen and (max-width: 768px) {
   .home-main {
     min-height: 77vh;

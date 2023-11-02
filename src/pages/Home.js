@@ -408,6 +408,21 @@ function Home(props) {
                       )}
                     </span>
                   </p>
+                  <div>
+                    {!loading.status ? (
+                      <button
+                        className={
+                          domainNameAvailability === "Available"
+                            ? "connect-wallet"
+                            : "connect-wallet disabled"
+                        }
+                      >
+                        Buy Now
+                      </button>
+                    ) : (
+                      <Skeleton />
+                    )}
+                  </div>
                 </div>
               </div>
             ) : null}
