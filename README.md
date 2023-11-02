@@ -43,9 +43,9 @@ Detailed domain information, including registration date, expiry date, and last 
 
 ## Technologies Used
 
-React.js
-Yarn package manager
-MODE network integration
+- React.js for front end.
+- Yarn package manager.
+- MODE testnet integration.
 
 ## Installation (Offline)
 
