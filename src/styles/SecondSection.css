@@ -1,0 +1,60 @@
+.sc-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 80%;
+  max-width: 1240px;
+  margin: 200px auto;
+  position: relative;
+  z-index: 100;
+  /* border: 1px solid red; */
+}
+.sc-left {
+  width: 50%;
+}
+.sc-left h2 {
+  width: 80%;
+  word-wrap: break-word;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 47px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #deff02;
+}
+.sc-left p {
+  width: 85%;
+  word-wrap: break-word;
+  margin-top: 50px;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 145.5%; /* 26.19px */
+  letter-spacing: 1.44px;
+}
+.sc-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.sc-right-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.sc-right-item span {
+  width: 70%;
+  word-wrap: break-word;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}

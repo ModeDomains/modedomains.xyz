@@ -1,0 +1,191 @@
+.fs-container {
+  position: relative;
+  height: 900px;
+  /* border: 1px solid red; */
+}
+
+.fs-main {
+  min-height: 75vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* width: 100vw; */
+}
+
+.fs-heading {
+  position: relative;
+  z-index: 100;
+}
+.fs-heading h1 {
+  color: #dffe00;
+  font-weight: 600;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2.5rem;
+  line-height: 120%;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 150px;
+  word-break: keep-all;
+}
+.fs-sub-heading p {
+  font-size: medium;
+  font-weight: 300;
+  font-family: "IBM Plex Sans", sans-serif;
+  /* letter-spacing: -0.05em; */
+
+  font-size: larger;
+  text-align: center;
+  width: 60%;
+  line-height: 180%;
+  margin: 30px auto;
+  word-break: break-word;
+}
+.yellow-color-text {
+  color: #dffe00;
+  font-weight: 600;
+}
+
+svg.design {
+  stroke-width: 1px;
+  stroke: rgba(222, 255, 2, 0.7);
+}
+
+.bg-hexagon-parent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px; /* This ensures the container won't exceed the viewport width */
+  box-sizing: border-box;
+  /* width: 100%; */
+}
+.big-hexagon {
+  position: absolute;
+  top: -10%;
+  left: 7%;
+  width: 80%;
+}
+.small-hexagon {
+  position: absolute;
+  top: 6%;
+  width: 55%;
+  left: 19%;
+}
+
+.bg-hexagon-parent .circle {
+  position: absolute;
+
+  border-radius: 999999px;
+  z-index: 2;
+  background-color: black;
+}
+.without-circle {
+  position: absolute;
+  z-index: 2;
+}
+.circle-one {
+  width: 166px;
+  height: 166px;
+  top: 34%;
+  left: 3%;
+  border: 1px solid #252525;
+  background: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-two {
+  width: 200px;
+  height: 200px;
+  top: 64%;
+  right: 24%;
+  border: 1px solid #252525;
+  background: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-three {
+  top: 62%;
+  left: 16%;
+  width: 400px;
+  height: 400px;
+}
+
+.bg-yellow {
+  width: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.i5 {
+  width: 70%;
+  transition: all 1s ease;
+}
+.i5:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0 10px #ddff0262);
+}
+.i2-parent {
+  width: 80%;
+  transform: rotate(90deg);
+}
+.i2-parent:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0 10px #ddff0262);
+}
+
+.i2-parent img {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.i3-parent {
+  transform: rotate(20deg);
+}
+.i3-parent:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0 10px #ddff0262);
+}
+.i3-parent img {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+.hero-buttons {
+  max-width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.hero-buttons .first {
+  cursor: pointer;
+  border-radius: 28px;
+  background: linear-gradient(93deg, #deff02 11.3%, #e4ff30 94.59%);
+  border: 1px solid #deff02;
+  padding: 15px 30px;
+  color: #191918;
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 161%; /* 22.54px */
+}
+.hero-buttons .first:hover span {
+  font-weight: 900;
+}
+.arrow-down-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
