@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/AppNavbar.css";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import logo from "../asset/images/logo.png";
+import logo from "../asset/mode_logo.png";
 import CustomWalletConnectButton from "./CustomWalletConnectButton";
 
 function AppNavbar(props) {
@@ -17,7 +17,8 @@ function AppNavbar(props) {
       <div className="navbar">
         <a href="/" style={{ textDecoration: "none" }}>
           <div className="logo">
-            <img src={logo} alt="modedomains logo" /> ModeDomains
+            <img src={logo} alt="modedomains logo" />
+            DOMAINS
           </div>
         </a>
         <div className="mobile-menu-icon close" onClick={toggleMenu}>

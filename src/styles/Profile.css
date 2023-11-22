@@ -56,7 +56,7 @@
 .wallet-address-title {
   font-size: x-large;
   font-weight: 600;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   /* letter-spacing: -0.05em; */
   color: rgba(255, 255, 255, 0.5);
   font-size: larger;
@@ -112,7 +112,7 @@
   justify-content: flex-start;
 }
 .info_title {
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   /* letter-spacing: -0.05em; */
   color: rgba(255, 255, 255, 0.5);
@@ -123,7 +123,7 @@
 }
 
 .info_value_main {
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   /* letter-spacing: -0.05em; */
   color: white;
@@ -134,7 +134,7 @@
 }
 .info_value_sub {
   font-size: medium;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   /* letter-spacing: -0.05em; */
   color: rgba(255, 255, 255, 0.5);
@@ -163,7 +163,7 @@
   border-radius: 10px;
   border: none;
   background-color: #dffe00;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   /* letter-spacing: -0.05em; */
   color: black;
@@ -182,7 +182,7 @@
   border-radius: 10px;
   border: none;
   background-color: #dffe00;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   /* letter-spacing: -0.05em; */
   color: black;
@@ -204,7 +204,7 @@
 }
 .dnf-info {
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   margin: 30px 0;
   font-size: 1.5rem;

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import contract_abi from "../artifacts/contracts/NameRegistry.sol/NameRegistry.json";
 import AvatarGenerator from "./AvatarGenerator";
+import { motion } from "framer-motion";
 
 function CustomWalletConnectButton(props) {
   const { address } = useAccount();
@@ -76,19 +77,23 @@ function CustomWalletConnectButton(props) {
             {(() => {
               if (!connected) {
                 return (
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     onClick={openConnectModal}
                     type="button"
                     className="connect-wallet"
                   >
                     Connect Wallet
-                  </button>
+                  </motion.button>
                 );
               }
 
               if (chain.unsupported) {
                 return (
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.9 }}
                     onClick={openChainModal}
                     type="button"
                     className="wrong_network_btn"
@@ -109,13 +114,15 @@ function CustomWalletConnectButton(props) {
                         xmlns="http://www.w3.org/2000/svg"
                       ></path>
                     </svg>
-                  </button>
+                  </motion.button>
                 );
               }
 
               return (
-                <div style={{ display: "flex", gap: 12 }}>
-                  <button
+                <div style={{ display: "flex", gap: 3 }}>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.9 }}
                     onClick={openChainModal}
                     style={{ display: "flex", alignItems: "center" }}
                     type="button"
@@ -142,9 +149,11 @@ function CustomWalletConnectButton(props) {
                       </div>
                     )}
                     {chain.name}
-                  </button>
+                  </motion.button>
 
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.9 }}
                     onClick={openAccountModal}
                     type="button"
                     className="address-balance"
@@ -180,7 +189,7 @@ function CustomWalletConnectButton(props) {
                     {/* {account.displayBalance
                       ? ` (${account.displayBalance})`
                       : ""} */}
-                  </button>
+                  </motion.button>
                 </div>
               );
             })()}

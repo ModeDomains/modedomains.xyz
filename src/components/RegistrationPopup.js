@@ -3,6 +3,7 @@ import { useAccount } from "wagmi";
 import "../styles/Loader.css";
 import { Tooltip } from "react-tooltip";
 import InfoPopup from "./InfoPopup";
+import { motion } from "framer-motion";
 
 function RegistrationPopup(props) {
   const { address } = useAccount();
@@ -310,7 +311,9 @@ function RegistrationPopup(props) {
                     <div className="sp sp-wave"></div>
                   </div>
                 ) : (
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     className="register"
                     onClick={() => {
                       if (address) props.registerName();
@@ -318,7 +321,7 @@ function RegistrationPopup(props) {
                     }}
                   >
                     Register
-                  </button>
+                  </motion.button>
                 )}
               </div>
             </div>
