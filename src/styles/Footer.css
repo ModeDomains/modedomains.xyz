@@ -52,3 +52,24 @@
   font-weight: 600;
   line-height: 145.5%; /* 17.46px */
 }
+@media (max-width: 768px) {
+  .footer-main {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .social-icons {
+    flex: 1;
+    max-width: none;
+    margin: 20px 0;
+  }
+  .copyrights {
+    text-align: center;
+  }
+  .copyrights span {
+    text-align: center;
+  }
+  .footer-navmenu {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,15 +1,68 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import "../styles/SecondSection.css";
 import scicon1 from "../assets/sc-icon1.png";
 import scicon2 from "../assets/sc-icon2.png";
 import scicon3 from "../assets/sc-icon3.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function SecondSection() {
+  const secondSectionRef = useRef();
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    let ctx = gsap.context(() => {
+      // use scoped selectors
+      gsap.set(".second-title-gsap", { x: 0, opacity: 1, y: 0 });
+      // gsap.from(".second-title-gsap", { opacity: 0, x: -50, duration: 1 });
+      gsap.from(".second-title-gsap", {
+        opacity: 0,
+        x: -110,
+        scrollTrigger: {
+          trigger: ".second-title-gsap",
+          start: "top 80%", // Change start position to trigger the animation
+
+          toggleActions: "play none none reverse",
+        },
+      });
+      gsap.set(".second-subtitle-gsap", { x: 0, opacity: 1 });
+      // gsap.from(".second-title-gsap", { opacity: 0, x: -50, duration: 1 });
+      gsap.from(".second-subtitle-gsap", {
+        opacity: 0,
+        x: -90,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: ".second-title-gsap",
+          start: "top 75%", // Change start position to trigger the animation
+          // end: "top center",
+          toggleActions: "play none none reverse",
+        },
+      });
+      // gsap.utils.toArray(".sc-right-item").forEach((element) => {
+      gsap.from(".sc-right-item", {
+        opacity: 0,
+        y: 40,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".second-title-gsap",
+          start: "top 80%", // Change start position to trigger the animation
+
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // });
+    }, secondSectionRef);
+    // clean up function
+    return () => ctx.revert();
+  }, []);
   return (
-    <div className="sc-main">
+    <div className="sc-main" ref={secondSectionRef}>
       <div className="sc-left">
-        <h2>Find Your Identity on the Rapidly Growing Mode Network</h2>
-        <p>
+        <h2 className="second-title-gsap">
+          Find Your Identity on the Rapidly Growing Mode Network
+        </h2>
+        <p className="second-subtitle-gsap">
           Mode Domains makes it easier for you to find, register & manage your
           unique identity
         </p>

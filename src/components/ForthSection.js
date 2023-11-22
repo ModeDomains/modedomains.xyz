@@ -1,14 +1,80 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import "../styles/ForthSection.css";
 import illustration from "../assets/forthsection_partners_illustration.png";
 import mode from "../assets/mode.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function ForthSection() {
+  const forthSectionRef = useRef();
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    let ctx = gsap.context(() => {
+      // use scoped selectors
+      gsap.set(".forth-title-gsap", { x: 0, opacity: 1 });
+      // gsap.from(".second-title-gsap", { opacity: 0, x: -50, duration: 1 });
+      gsap.from(".forth-title-gsap", {
+        opacity: 0,
+        y: 110,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".forth-main",
+          start: "top 80%", // Change start position to trigger the animation
+
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // gsap.from(".second-title-gsap", { opacity: 0, x: -50, duration: 1 });
+      gsap.from(".forth-image-gsap", {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".forth-main",
+          start: "top 70%", // Change start position to trigger the animation
+          toggleActions: "play none none reverse",
+        },
+      });
+      // gsap.utils.toArray(".sc-right-item").forEach((element) => {
+
+      gsap.from(".forth-icon", {
+        opacity: 0,
+        x: 100,
+        duration: 2,
+        scrollTrigger: {
+          trigger: ".forth-icon",
+          start: "top 75%", // Change start position to trigger the animation
+          toggleActions: "play none none reverse",
+        },
+      });
+      gsap.from(".partner-text", {
+        opacity: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: ".forth-icon",
+          start: "top 70%", // Change start position to trigger the animation
+
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      // });
+    }, forthSectionRef);
+    // clean up function
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="forths-container">
+    <div className="forths-container" ref={forthSectionRef}>
       <div className="forth-main">
         <div className="forth-left">
-          <h2>The Mode Domains Partner Ecosystem</h2>
-          <img src={illustration} alt="mode partner" />
+          <h2 className="forth-title-gsap">
+            The Mode Domains Partner Ecosystem
+          </h2>
+          <img
+            src={illustration}
+            alt="mode partner"
+            className="forth-image-gsap"
+          />
         </div>
         <div className="forth-right">
           <div className="forth-right-item">
@@ -30,8 +96,8 @@ function ForthSection() {
                   fill="white"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M10.597 0C4.74442 0 0 4.68379 0 10.4615V23.5385C0 29.3162 4.74442 34 10.597 34H23.8432C29.6958 34 34.4402 29.3162 34.4402 23.5385V10.4615C34.4402 4.68379 29.6958 0 23.8432 0H10.597ZM23.8432 4.18462H10.597C7.08544 4.18462 4.23879 6.99489 4.23879 10.4615V23.5385C4.23879 27.0051 7.08544 29.8154 10.597 29.8154H23.8432C27.3547 29.8154 30.2013 27.0051 30.2013 23.5385V10.4615C30.2013 6.99489 27.3547 4.18462 23.8432 4.18462Z"
                   fill="white"
                 />
@@ -44,8 +110,8 @@ function ForthSection() {
                   fill="white"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M94.4375 12.7615C94.4375 14.344 94.1086 15.7533 93.4525 16.9507C92.8042 18.1364 91.8157 19.1074 90.6103 19.7418C89.3662 20.4052 87.8706 20.7418 86.165 20.7418H82.0904V28.1444H76.4662V5.09998H86.0862C87.7587 5.09998 89.2431 5.43493 90.4993 6.09347C91.7107 6.71458 92.7189 7.66092 93.4077 8.82315C94.1017 10.0216 94.4573 11.3816 94.4375 12.7615ZM87.2619 15.4038C87.7329 15.1568 88.1272 14.7875 88.401 14.3359C88.6791 13.875 88.8229 13.3478 88.8177 12.8117C88.8255 12.3008 88.6782 11.7993 88.3941 11.3716C88.1117 10.9541 87.7199 10.6189 87.2619 10.4007C86.7694 10.1675 86.2287 10.05 85.6824 10.0577H82.0904V15.7857H85.6659C86.2218 15.7917 86.7702 15.6604 87.2619 15.4038Z"
                   fill="white"
                 />
@@ -58,20 +124,20 @@ function ForthSection() {
                   fill="white"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M220.311 22.4834C221.379 20.7079 221.942 18.6816 221.94 16.6176C221.939 14.5537 221.374 12.5282 220.303 10.7541C219.216 9.00768 217.676 7.57799 215.842 6.61187C213.928 5.59935 211.786 5.07952 209.614 5.10059H200.872V28.145H209.666C211.829 28.1659 213.963 27.646 215.867 26.6338C217.698 25.6661 219.232 24.233 220.311 22.4834ZM215.409 19.8735C214.877 20.8161 214.089 21.5934 213.132 22.1177C212.134 22.6618 211.01 22.9406 209.869 22.9268H206.497V10.327H209.852C210.996 10.3117 212.124 10.5905 213.124 11.136C214.081 11.6622 214.872 12.439 215.409 13.3802C215.966 14.3694 216.249 15.4854 216.23 16.6164C216.249 17.754 215.966 18.8767 215.409 19.8735Z"
                   fill="white"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M105.544 5.09998H110.558L119.525 28.1768H113.754L112.481 24.4925V24.4812H103.567V24.4925L102.294 28.1768H96.5254L105.544 5.09998ZM108.034 11.5641L107.954 11.7987L105.249 19.6269H110.813L108.117 11.7987L108.034 11.5641Z"
                   fill="white"
                 />
               </svg>
             </div>
-            <span>
+            <span className="partner-text">
               A decentralized universal Web3 name service network for auctions
             </span>
           </div>
@@ -86,8 +152,8 @@ function ForthSection() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M31.9213 3.17161C31.9213 2.07757 31.0344 1.19067 29.9403 1.19067H25.6056C24.5116 1.19067 23.6247 2.07757 23.6247 3.17161V7.46363C23.6247 8.55768 24.5116 9.44456 25.6056 9.44456H28.3298C29.4239 9.44456 30.3108 10.3315 30.3108 11.4255V38.828C30.3108 39.9221 31.1977 40.809 32.2917 40.809H36.6265C37.7205 40.809 38.6074 39.9221 38.6074 38.828V11.4251C38.6074 10.331 37.7205 9.44412 36.6265 9.44412H33.9023C32.8082 9.44412 31.9213 8.55723 31.9213 7.46319V3.17161ZM15.2719 3.17174C15.2719 2.07769 14.385 1.1908 13.291 1.1908H8.95628C7.86225 1.1908 6.97535 2.07769 6.97535 3.17174V7.46344C6.97535 8.55747 6.08845 9.44437 4.99442 9.44437H1.98093C0.886894 9.44437 0 10.3313 0 11.4253V38.8282C0 39.9222 0.886894 40.8091 1.98093 40.8091H6.31565C7.4097 40.8091 8.29658 39.9222 8.29658 38.8282V11.4256C8.29658 10.3316 9.18348 9.44469 10.2775 9.44469H13.291C14.385 9.44469 15.2719 8.55779 15.2719 7.46376V3.17174ZM23.5101 18.9716C23.5101 17.8777 22.6232 16.9908 21.5291 16.9908H17.1944C16.1003 16.9908 15.2134 17.8777 15.2134 18.9716V31.0459C15.2134 32.14 16.1003 33.0269 17.1944 33.0269H21.5291C22.6232 33.0269 23.5101 32.14 23.5101 31.0459V18.9716Z"
                   fill="white"
                 />
@@ -133,17 +199,23 @@ function ForthSection() {
                 />
               </svg>
             </div>
-            <span>An EVM-based blockchain analyzer for BlockExplorer</span>
+            <span className="partner-text">
+              An EVM-based blockchain analyzer for BlockExplorer
+            </span>
           </div>
           <div className="forth-right-item">
             <div className="forth-icon">
               {/* mode svg icon */}
               <img src={mode} alt="mode network" />
             </div>
-            <span>To bridge transactions across chains</span>
+            <span className="partner-text">
+              To bridge transactions across chains
+            </span>
           </div>
           <div className="forth-right-item">
-            <button>Get your .mode on</button>
+            <button onClick={() => window.open("https://app.modedomains.xyz/")}>
+              Get your .mode on
+            </button>
           </div>
         </div>
       </div>

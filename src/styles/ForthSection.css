@@ -41,8 +41,8 @@
   transition: all 1s ease;
 }
 .forth-left img:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(1px 0 10px #deff02);
+  /* transform: scale(1.1); */
+  /* filter: drop-shadow(1px 0 1px #ddff0250); */
 }
 .forth-icon {
   height: 42px;
@@ -63,6 +63,7 @@
   margin-top: 20px;
 }
 .forth-right-item button {
+  cursor: pointer;
   width: max-content;
   background-color: transparent;
   border: 2px solid #deff02;
@@ -86,4 +87,28 @@
   letter-spacing: 0.08em;
   text-align: left;
   color: #ffffffb4;
+}
+
+@media (max-width: 768px) {
+  .forth-main {
+    margin: 30px auto;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+  .forth-left {
+    margin-right: 0;
+    width: 100%;
+  }
+  .forth-right {
+    width: 100%;
+  }
+  .forth-left h2 {
+    width: 80%;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .forth-left img {
+    margin-top: 0px;
+    width: 300px;
+  }
 }

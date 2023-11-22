@@ -69,13 +69,13 @@
   transition: all 1s ease;
 }
 .fifthsection-i8:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0px 0 10px #ddff0262);
+  transform: scale(1.1) !important;
+  filter: drop-shadow(0px 4px 50px rgba(222, 255, 2, 0.25));
 }
 .fifthsection-i7 {
   width: 30%;
   position: absolute;
-  top: -20%;
+  bottom: -20%;
   right: -10%;
   max-width: 700px;
   z-index: 10;
@@ -84,9 +84,61 @@
 }
 .fifthsection-i7:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0px 0 100px #ddff0232);
+  filter: drop-shadow(0px 4px 50px rgba(222, 255, 2, 0.25));
 }
 .fifthsection-i7 img {
   width: 100%;
   transform: rotate(-45deg);
+}
+.mobile-i7 {
+  position: absolute;
+  top: -1%;
+  width: 150px;
+  transform: rotate(-45deg);
+  right: -10%;
+  z-index: 1000;
+}
+@media (max-width: 768px) {
+  .fifth-container {
+    min-height: max-content;
+    margin-top: -10%;
+  }
+  .fifth-main {
+    padding-bottom: 150px;
+    padding-top: 150px;
+    width: auto;
+    max-width: none;
+    overflow-x: hidden;
+    margin-left: 0;
+  }
+  .fifth-main h2 {
+    font-size: 1.8rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .fifth-main p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .fifthsection-i7 {
+    display: none;
+  }
+  .fifthsection-i8 {
+    bottom: -10px;
+    top: auto;
+  }
+  .fifth-details {
+    margin: 40px auto;
+    margin-left: 00;
+    gap: 10px;
+    justify-content: center;
+  }
+  .fifth-count {
+    font-size: 2rem;
+    line-height: 130%;
+  }
+  .fifth-label {
+    width: 70%;
+  }
 }

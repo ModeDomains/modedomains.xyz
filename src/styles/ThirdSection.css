@@ -6,9 +6,11 @@
   z-index: 100;
   margin-top: 200px;
 }
-.ts-title h2 {
+.ts-title {
   width: 80%;
   margin: 0 auto;
+}
+.ts-title h2 {
   color: #deff02;
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
@@ -178,4 +180,51 @@
   line-height: 26px;
   letter-spacing: 0.08em;
   text-align: left;
+}
+
+.i1-parent {
+  position: absolute;
+  z-index: 2;
+  top: -8vw;
+  left: -12vw;
+  width: 30vw;
+  transform: rotate(0deg);
+}
+.i1-parent:hover img {
+  transform: scale(1.1);
+  /* filter: drop-shadow(0px 0 15px #ddff0262); */
+}
+.i1-parent img {
+  width: 75%;
+  transition: all 1s ease;
+}
+
+@media (max-width: 768px) {
+  .ts-main {
+    margin: 100px auto;
+    padding-top: 100px;
+    width: 80%;
+  }
+  .ts-title {
+    width: auto;
+  }
+  .ts-title h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 47px;
+  }
+  .i1-parent {
+    top: -5%;
+    left: -22%;
+
+    width: 200px;
+  }
+  .ts-flex-boxes {
+    width: 100%;
+    margin: 60px auto;
+  }
+  .box-item {
+    width: 100%;
+    margin: 10px;
+  }
 }
