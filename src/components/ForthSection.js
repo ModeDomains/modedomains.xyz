@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ForthSection() {
   const forthSectionRef = useRef();
+  // gsap animation code start - DO NOT REMOVE THIS CODE
   // useLayoutEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
   //   let ctx = gsap.context(() => {

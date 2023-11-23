@@ -19,6 +19,8 @@
   font-weight: 500;
   line-height: 131%; /* 52.4px */
   letter-spacing: 3.2px;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 .ts-title p {
   color: #fff;

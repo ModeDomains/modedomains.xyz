@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ThirdSection() {
   const thirdSectionRef = useRef();
+  // gsap animation code start - DO NOT REMOVE THIS CODE
   // useLayoutEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
   //   let ctx = gsap.context(() => {
@@ -74,7 +75,7 @@ function ThirdSection() {
         </div>
         <div className="ts-title">
           <h2 className="third-title-gsap">
-            Secure Transfers That Are Easily Accessible on Blockchain Explorer
+            SECURE TRANSFERS THAT ARE EASILY ACCESSIBLE ON BLOCKCHAIN EXPLORER
           </h2>
           <p className="third-sub-title-gsap">
             With Mode Domains, you don’t need the hassle of copy-pasting long
@@ -104,13 +105,17 @@ function ThirdSection() {
           </div>
           <div className="box-item box-four">
             <div className="box-text">
-              <span>Cross-chain token transfers with a minimal loss risk</span>
+              <span>
+                Unified domain names across the Mode network, accessible on
+                Blockchain Explorer
+              </span>
             </div>
           </div>
           <div className="box-item box-five">
             <div className="box-text">
               <span>
-                Budget-friendly subscription plans with distinct expiry dates
+                Free handles for initial 1000 mainnet addresses from the testnet
+                holder
               </span>
             </div>
           </div>

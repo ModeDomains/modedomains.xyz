@@ -138,14 +138,16 @@
   top: -100px;
   left: 3%;
   width: 85%;
-  opacity: 0;
+  /* opacity: 0; */
+  opacity: 1;
 }
 .small-hexagon {
   position: absolute;
   top: 0px;
   width: 60%;
   left: 16%;
-  opacity: 0;
+  /* opacity: 0; */
+  opacity: 1;
 }
 
 .bg-hexagon-parent .circle {
@@ -160,7 +162,8 @@
   z-index: 2;
 }
 .circle-one {
-  opacity: 0;
+  /* opacity: 0; */
+  opacity: 1;
   z-index: 10000;
   width: 150px;
   height: 150px;
@@ -174,8 +177,8 @@
   align-items: center;
 }
 .circle-two {
-  opacity: 0;
-
+  /* opacity: 0; */
+  opacity: 1;
   width: 160px;
   height: 160px;
   top: 57%;
@@ -188,8 +191,8 @@
   align-items: center;
 }
 .circle-three {
-  opacity: 0;
-
+  /* opacity: 0; */
+  opacity: 1;
   top: 55%;
   left: 14%;
   width: 25%;

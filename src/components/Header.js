@@ -144,7 +144,7 @@ function Header() {
                 </svg>
               </li>
               <li className="subMenuItem">
-                <a href="/">Our Journey</a>
+                <a href="/roadmap">Our Journey</a>
               </li>
             </ul>
           </span>

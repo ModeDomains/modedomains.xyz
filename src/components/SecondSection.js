@@ -8,6 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function SecondSection() {
   const secondSectionRef = useRef();
+
+  // gsap animation code start - DO NOT REMOVE THIS CODE
   // useLayoutEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
   //   let ctx = gsap.context(() => {

@@ -18,7 +18,7 @@ function Footer() {
         </div>
         <div className="footer-navmenu">
           <ul>
-            <li>Get Started</li>
+            <li>Get Started </li>
             <li>Documentation</li>
             <li>Roadmap</li>
             <li>Community</li>

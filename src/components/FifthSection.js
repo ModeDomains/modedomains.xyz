@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function FifthSection() {
   const fifthSectionRef = useRef();
+  // gsap animation code start - DO NOT REMOVE THIS CODE
   // useLayoutEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
   //   let ctx = gsap.context(() => {

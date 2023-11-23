@@ -1,30 +1,27 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import FirstSection from "./components/FirstSection";
-import SecondSection from "./components/SecondSection";
-import ThirdSection from "./components/ThirdSection";
-import ForthSection from "./components/ForthSection";
-import FifthSection from "./components/FifthSection";
-import FAQs from "./components/FAQs";
-import yellowbg from "../src/assets/bg-yellow.png";
-import i4 from "../src/assets/4.png";
+
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import InitialLoadingAnimation from "./components/InitialLoadingAnimation";
+import Home from "./pages/Home";
+import Roadmap from "./pages/Roadmap";
 
 function App() {
   const AppRef = useRef();
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate some asynchronous action, like fetching data
-    setTimeout(() => {
-      setLoading(false); // Set loading to false after the async action is complete
-    }, 3300); // Adjust the timeout based on your needs
-  }, []); // Empty dependency array ensures the effect runs only once
+  // useEffect(() => {
+  //   // Simulate some asynchronous action, like fetching data
+  //   setTimeout(() => {
+  //     setLoading(false); // Set loading to false after the async action is complete
+  //   }, 3300); // Adjust the timeout based on your needs
+  // }, []); // Empty dependency array ensures the effect runs only once
 
+  // gsap animation code start - DO NOT REMOVE THIS CODE
   // useLayoutEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
   //   let ctx = gsap.context(() => {
@@ -70,27 +67,18 @@ function App() {
   //   // clean up function
   //   return () => ctx.revert();
   // }, []);
+
   return (
     <div className="App" ref={AppRef}>
-      <img className="bg-yellow" src={yellowbg} alt="yellow" />
-      <Header />
-      {/* {loading ? ( */}
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/roadmap" element={<Roadmap />} />
+        </Routes>
+      </Router>
       <InitialLoadingAnimation />
-      {/* ) : ( */}
-      <>
-        <div className="i4-parent">
-          <img src={i4} alt="mode domains" className="i4" />
-        </div>
-
-        <FirstSection />
-        <SecondSection />
-        <ThirdSection />
-        <ForthSection />
-        <FifthSection />
-        <FAQs />
-        <Footer />
-      </>
-      {/* )} */}
+      <Footer />
     </div>
   );
 }
