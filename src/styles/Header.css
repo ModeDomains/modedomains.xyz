@@ -90,11 +90,11 @@
   transition: visibility 0.3s ease;
 }
 .submenu .subMenuItemParent {
-  /* visibility: hidden; */
+  visibility: hidden;
   opacity: 0;
 }
 .submenu:hover > .subMenuItemParent {
-  /* visibility: visible; */
+  visibility: visible;
   opacity: 1;
 }
 

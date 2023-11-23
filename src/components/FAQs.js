@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import "../styles/FAQs.css";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function FAQs() {
   const [activeBox, setActiveBox] = useState("");
@@ -40,54 +40,54 @@ function FAQs() {
   ];
 
   const faqSectionRef = useRef();
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    let ctx = gsap.context(() => {
-      // use scoped selectors
-      gsap.set(".faq-title-gsap", { y: 0, opacity: 1, scale: 1 });
-      // gsap.from(".second-title-gsap", { opacity: 0, x: -50, duration: 1 });
-      gsap.from(".faq-title-gsap", {
-        opacity: 0,
-        y: 30,
-        scale: 0,
-        scrollTrigger: {
-          trigger: ".faqs-main",
-          start: "top 80%", // Change start position to trigger the animation
+  // useLayoutEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   let ctx = gsap.context(() => {
+  //     // use scoped selectors
+  //     gsap.set(".faq-title-gsap", { y: 0, opacity: 1, scale: 1 });
+  //     // gsap.from(".second-title-gsap", { opacity: 0, x: -50, duration: 1 });
+  //     gsap.from(".faq-title-gsap", {
+  //       opacity: 0,
+  //       y: 30,
+  //       scale: 0,
+  //       scrollTrigger: {
+  //         trigger: ".faqs-main",
+  //         start: "top 80%", // Change start position to trigger the animation
 
-          toggleActions: "play none none reverse",
-        },
-      });
+  //         toggleActions: "play none none reverse",
+  //       },
+  //     });
 
-      // gsap.utils.toArray(".sc-right-item").forEach((element) => {
-      gsap.set(".faqs-box", { opacity: 1, y: 0 });
-      gsap.from(".faqs-box", {
-        opacity: 0,
-        y: 30,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: ".faqs-main",
-          start: "top 75%", // Change start position to trigger the animation
+  //     // gsap.utils.toArray(".sc-right-item").forEach((element) => {
+  //     gsap.set(".faqs-box", { opacity: 1, y: 0 });
+  //     gsap.from(".faqs-box", {
+  //       opacity: 0,
+  //       y: 30,
+  //       stagger: 0.2,
+  //       scrollTrigger: {
+  //         trigger: ".faqs-main",
+  //         start: "top 75%", // Change start position to trigger the animation
 
-          toggleActions: "play none none reverse",
-        },
-      });
+  //         toggleActions: "play none none reverse",
+  //       },
+  //     });
 
-      gsap.set(".view-more-gsap", { opacity: 1, y: 0 });
-      gsap.from(".view-more-gsap", {
-        opacity: 0,
-        y: -50,
-        scrollTrigger: {
-          trigger: ".faqs-main",
-          start: "top +=420", // Change start position to trigger the animation
-          end: "top +=400",
-          toggleActions: "play none none reverse",
-        },
-      });
-      // });
-    }, faqSectionRef);
-    // clean up function
-    return () => ctx.revert();
-  }, []);
+  //     gsap.set(".view-more-gsap", { opacity: 1, y: 0 });
+  //     gsap.from(".view-more-gsap", {
+  //       opacity: 0,
+  //       y: -50,
+  //       scrollTrigger: {
+  //         trigger: ".faqs-main",
+  //         start: "top +=420", // Change start position to trigger the animation
+  //         end: "top +=400",
+  //         toggleActions: "play none none reverse",
+  //       },
+  //     });
+  //     // });
+  //   }, faqSectionRef);
+  //   // clean up function
+  //   return () => ctx.revert();
+  // }, []);
   return (
     <div className="faqs-container" ref={faqSectionRef}>
       <div className="faqs-main">
